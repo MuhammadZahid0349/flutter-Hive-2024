@@ -10,6 +10,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   var directory = await getApplicationSupportDirectory();
   Hive.init(directory.path); //creates files for saving data
+  // boxes is just like a file where we stored data
 
   runApp(const MyApp());
 }
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Flutter Hive 2024',
             builder: EasyLoading.init(),
-            home: HomeScreen(),
+            home: const HomeScreen(),
           );
         });
   }
